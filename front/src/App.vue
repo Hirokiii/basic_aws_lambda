@@ -20,6 +20,27 @@ export default {
     Header,
     Navbar,
     QA
+  },
+  data() {
+    return {
+      json_data: []
+    }
+  },
+  created() {
+    this.json_data = [
+      {
+        id: 1,
+        eng: "How are you?",
+        ee: "Kuidus läheb?",
+        did_learn: 0
+      },
+      {
+        id: 2,
+        eng: "Thank you.",
+        ee: "Aitäh",
+        did_learn: 1
+      }
+    ]
   }
 }
 </script>
@@ -30,7 +51,7 @@ export default {
     height: 100%;
   }
   .container {
-    max-width: 500px;  
+    max-width: 300px;  
     margin: 0;
     overflow: auto;
     min-height: 300px;
@@ -38,8 +59,8 @@ export default {
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.3);
     position: absolute;
-    top: 550%;
-    left: 100px;
+    top: 300%;
+    left: 10%;
   }
   .image {
     height: 900px;

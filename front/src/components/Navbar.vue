@@ -2,9 +2,9 @@
     <nav>
         <label class="logo">{{ title }}</label>
         <ul>
-            <li><a href="#">Pick</a></li>
-            <li><a href="#">View</a></li>
-            <li><a href="#">Put</a></li>
+            <li><a href="#" @click="onClick()">Pick</a></li>
+            <li><a href="#" @click="onClick()">View</a></li>
+            <li><a href="#" @click="onClick()">Put</a></li>
         </ul>
     </nav>
 </template>
@@ -18,6 +18,11 @@ export default {
             default: "You need to pass the title",
         },
     },
+    methods: {
+        onClick() {
+            console.log("clicked");
+        }
+    }
 }
 </script>
 

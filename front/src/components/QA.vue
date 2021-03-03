@@ -3,7 +3,7 @@
         <h2 class="eng">{{ question }}</h2>
         <hr>
         <h3 class="ee">Sinu Vastus</h3>
-        <textarea name="ans" id="ans" cols="30" rows="8" class="ee"></textarea>
+        <textarea name="ans" id="ans" cols="15" rows="5" class="ee" @keyup.enter="onSubmit"></textarea>
     </div>
 </template>
 
@@ -12,6 +12,12 @@ export default {
     name: "QA",
     props: {
         question: String
+    },
+    methods: {
+        onSubmit(event) {
+            const user_ans = event.target.value.toLowerCase();
+            console.log(user_ans);
+        }
     }
 }
 </script>

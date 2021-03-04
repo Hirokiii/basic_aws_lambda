@@ -1,0 +1,16 @@
+{
+    "QA": [
+        {
+            "id": 1,
+            "eng": "How are you?",
+            "ee": "Kuidus läheb?",
+            "did_learn": 0
+        },
+        {
+            "id": 2,
+            "eng": "Thank you.",
+            "ee": "Aitäh",
+            "did_learn": 1
+        }
+    ]
+}

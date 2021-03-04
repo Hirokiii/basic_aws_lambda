@@ -23,24 +23,17 @@ export default {
   },
   data() {
     return {
-      json_data: []
     }
   },
-  created() {
-    this.json_data = [
-      {
-        id: 1,
-        eng: "How are you?",
-        ee: "Kuidus läheb?",
-        did_learn: 0
-      },
-      {
-        id: 2,
-        eng: "Thank you.",
-        ee: "Aitäh",
-        did_learn: 1
-      }
-    ]
+  methods: {
+    async fetchData(){
+      const res = await fetch("http://localhost:5000")
+      const data = res.json()
+      return data
+    }
+  },
+  async created() {
+    this.json_data = await this.fetchData()
   }
 }
 </script>
@@ -59,8 +52,8 @@ export default {
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.3);
     position: absolute;
-    top: 300%;
-    left: 10%;
+    top: 600%;
+    left: 20%;
   }
   .image {
     height: 900px;
